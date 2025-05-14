@@ -1,5 +1,5 @@
 :root {
-    --main-font: "Neulis Sans";
+    --main-font: "neulis-sans";
     --title-font: "Forma DJR Display", sans-serif;
     --black: hsla(40, 10%, 10%, 1);
     --white: hsla(42, 25%, 95%, 1);
@@ -335,4 +335,7 @@ a.button-fill {
             margin-bottom: 15px;
         }
     }
+}
+.article img {
+    transition: transform 0.2s ease;
 }
