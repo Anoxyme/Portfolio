@@ -297,7 +297,7 @@ a.button-fill {
 
         h1 {
             color: var(--black, #1B1916);
-            font-family: "Neulis Sans";
+            font-family: var(--main-font);
             font-size: 24px;
             line-height: 34px;
             letter-spacing: 0.18px;
@@ -322,13 +322,13 @@ a.button-fill {
                 border: 1px solid var(--black, #1B1916);
                 color: var(--black, #1B1916);
                 font-size: 12px;
-                font-family: "Neulis Sans";
+                font-family: var(--main-font);
             }
         }
 
         p {
             color: var(--black, #1B1916);
-            font-family: "Neulis Sans";
+            font-family: var(--main-font);
             font-size: 14px;
             line-height: 18px;
             opacity: 0.7;
