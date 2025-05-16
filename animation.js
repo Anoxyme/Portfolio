@@ -48,9 +48,10 @@ gsap.to("#hero-core", {
     start: "top top",
     end: "80% top",
     scrub: true,
+    toggleActions: "play none play none"
   },
   height: "50vh",
-  width: "95vw",
+  width: "90vw",
   borderRadius: '50px',
   ease: "power2.out"
 });
@@ -123,3 +124,15 @@ sectiontitles.forEach((section, index) => {
   });
 });
 
+/* Animation footer*/
+document.querySelectorAll('.button.stroke p').forEach(p => {
+    const defaultText = p.dataset.default;
+    const hoverText = p.dataset.hover;
+
+    p.parentElement.addEventListener('mouseenter', () => {
+        p.textContent = hoverText;
+    });
+    p.parentElement.addEventListener('mouseleave', () => {
+        p.textContent = defaultText;
+    });
+});
