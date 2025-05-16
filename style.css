@@ -28,7 +28,7 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3, p, a {
+h1, h2, h3, h4, p, a {
     z-index: 10;
     font-family: var(--main-font);
 }
@@ -50,16 +50,16 @@ img {pointer-events: none;
         color: var(--white);
         width: max-content;
         text-decoration: none;
-  border: none;
+        border: none;
     }
     img {
        height: 24px;
        width: 24px;
     }
-    &:hover {
+    &:hover::after {
         img {
             rotate: 45deg;
-            transition: rotate 0.3s ease-in-out;
+            transition: rotate 0.3s ease;
         }
     }
 }
@@ -402,6 +402,7 @@ footer {
     .contact {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         background-color: var(--black);
         border-radius: 40px;
         width: 90vw;
@@ -433,16 +434,36 @@ footer {
             flex-direction: column;
             width: 20%;
             gap: 10px;
-
-            .button:hover {
-
-            }
         }
     }
 
     .links {
-        position: relative;
+        display: flex;
         background-color: var(--white);
-        height: 120px;
+        width: 90%;
+        padding: 90px;
+        box-sizing: border-box;
+        gap: 50px;
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            h4 {
+                margin-bottom: 10px;
+            }
+            p, a {
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                cursor: pointer;
+                color: var(--black);
+            }
+            p:hover, a:hover {
+                text-decoration: underline;
+                color: #222221;
+            }
+        }
     }
 }
