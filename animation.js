@@ -123,16 +123,3 @@ sectiontitles.forEach((section, index) => {
     y: 100,
   });
 });
-
-/* Animation footer*/
-document.querySelectorAll('.button.stroke p').forEach(p => {
-    const defaultText = p.dataset.default;
-    const hoverText = p.dataset.hover;
-
-    p.parentElement.addEventListener('mouseenter', () => {
-        p.textContent = hoverText;
-    });
-    p.parentElement.addEventListener('mouseleave', () => {
-        p.textContent = defaultText;
-    });
-});

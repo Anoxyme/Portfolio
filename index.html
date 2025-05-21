@@ -4,17 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maxime Melan</title>
-    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://use.typekit.net/jlg5shc.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/jlg5shc.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+<!-- Importation des svg -->
+<svg style="display: none;">
+  <symbol id="vector-arrow" viewBox="0 0 14 14">
+    <path d="M13.5 0.5V9.5H12.5V2.20312L1.41016 13.293L0.707031 12.5898L11.7969 1.5H4.5V0.5H13.5Z"
+          fill="currentColor"
+          stroke="currentColor" />
+  </symbol>
+</svg>
+<!-- Site web -->
 <body>
     <div id="hero">
         <div id="hero-core">
             <div id="hero-title">
                 <img src="ressources/star.svg" alt="star" class="hero-star star1">
-                <img src="ressources/star.svg" al="star" class="hero-star star2">
+                <img src="ressources/star.svg" alt="star" class="hero-star star2">
                 <p class="hero-subtitle">Bienvenue sur mon portfolio</p>
-                <h1 class="hero-bigtitle">Le <span class="hero-design">design</span>, c’est mon terrain de jeu. Moi, c’est <span class="hero-name">Maxime</span></Maxime></h1>
+                <h1 class="hero-bigtitle">Le <span class="hero-design">design</span>, c’est mon terrain de jeu. Moi, c’est <span class="hero-name">Maxime</span></h1>
                 <a id="start_action" class="button">Découvrir</a>
             </div>
             <img src="ressources/hero-dot.svg" id="hero-dot">
@@ -64,9 +73,11 @@
             <p class="description">
                 Pendant une semaine, nous avons revisité l’ensemble d’une charte graphique, les interfaces web et le plan de communication d’une association de notre choix.
             </p>
-            <a class="button fill">
+            <a class="button fill" href="podcar.html">
                 <p>Voir plus</p>
-                <img src="ressources/cta/Vector.svg">
+                <svg width="24" height="24" color="var(--white)">
+                    <use href="#vector-arrow" />
+                </svg>
             </a>
         </div>
         <div class="article">
@@ -83,24 +94,27 @@
             </p>
             <a class="button fill">
                 <p>Voir plus</p>
-                <img src="ressources/cta/Vector.svg">
+                <svg width="24" height="24" color="var(--white)">
+                    <use href="#vector-arrow" />
+                </svg>
             </a>
         </div>
         <div class="article">
             <img src="ressources/e-commerce.svg" class="illustration" alt="">
             <h3>Maquette e-commerce</h3>
             <ul>
-                <li>Marketing</li>
-                <li>Communication</li>
-                <li>Design</li>
-                <li>Developpement</li>
+                <li>Maquettage</li>
+                <li>WebDesign</li>
+                <li>Prototypage</li>
             </ul>
             <p class="description">
                 Réalisation d’une maquette de site web et d’une application mobile sur le thème du sport. La maquette a été réalisée sur Figma et entièrement prototypée.
             </p>
-            <a class="button fill">
+            <a href="e-commerce.html" class="button fill">
                 <p>Voir plus</p>
-                <img src="ressources/cta/Vector.svg">
+                <svg width="24" height="24" color="var(--white)">
+                    <use href="#vector-arrow" />
+                </svg>
             </a>
         </div>
     </section>
@@ -111,11 +125,15 @@
             <div class="buttons">
                 <a href="tel:0781688761"class="button stroke">
                     <p data-default="Téléphone" data-hover="07 81 68 87 61">Téléphone</p>
-                    <img src="ressources/cta/Vector.svg">
+                    <svg width="24" height="24" color="var(--white)">
+                        <use href="#vector-arrow" />
+                    </svg>
                 </a>
                 <a href="mailto:melan.maxime@laposte.net"  class="button stroke">
                     <p data-default="Email" data-hover="maxime.melan@laposte.net">Email</p>
-                    <img src="ressources/cta/Vector.svg">
+                    <svg width="24" height="24" color="var(--white)">
+                        <use href="#vector-arrow" />
+                    </svg>
                 </a>
             </div>
         </div>
@@ -128,15 +146,29 @@
             </div>
             <div>
                 <h4>Mes projets</h4>
-                <a>Association Macao</a>
-                <a>Podcar</a>
-                <a>Maquette e-commerce</a>
+                <a href="macao.html">Association Macao</a>
+                <a href="podcar.html">Podcar</a>
+                <a href="e-commerce.html">Maquette e-commerce</a>
             </div>
             <div>
                 <h4>Mes ressources</h4>
                 <a href="ressources/CV 2025 - MELAN Maxime.pdf"><img src="ressources/icon/doc.svg">Mon Curriculum vitae</a>
             </div>
         </div>
+        <script>
+            /* Animation button*/
+            document.querySelectorAll('.button.stroke p').forEach(p => {
+                const defaultText = p.dataset.default;
+                const hoverText = p.dataset.hover;
+
+                p.parentElement.addEventListener('mouseenter', () => {
+                    p.textContent = hoverText;
+                });
+                p.parentElement.addEventListener('mouseleave', () => {
+                    p.textContent = defaultText;
+                });
+            });
+        </script>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollToPlugin.min.js"></script>
