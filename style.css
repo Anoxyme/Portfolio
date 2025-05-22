@@ -130,6 +130,13 @@ img {pointer-events: none;
 
 
 }
+.back:hover {
+    border: 1px solid var(--white);
+
+    svg {
+        rotate: -135deg;
+    }
+}
 
 /* SECTION : Hero (Titre principal + décoration) */
 #hero {
@@ -503,11 +510,14 @@ footer {
 
 @media screen and (max-width: 768px) {
    
-    footer {
+    footer .contact{
         align-items: start;
         flex-direction: column;
         gap: 50px;
-        .contact .buttons {
+        h3 {
+            max-width: 100%;
+        }
+        .buttons {
             align-items: start;
         }
     }
@@ -581,9 +591,12 @@ footer {
 
 img.article-illustration {
     position: absolute;
-    right: 10vw;
-    height: 35vw;
+    right: 10%;
+    width: 35vw;
+    min-width: 400px;
+    height: auto;
     bottom: 10vh;
+
 }
 
 #article-images {
@@ -636,13 +649,19 @@ img.article-illustration {
         grid-template-columns: 1fr;
     }
     
+    
+}
+@media screen and (max-width: 1300px) {
+    
     img.article-illustration {
-        top: 50%;
-        left: 50%;
-        transform: translate(50%, 50%);
-        width: 55vw;
+        position: relative;
+        right: auto;
+        bottom: auto;
+        margin: 0 auto;
+
     }
 }
+
 
 #article-description {
     background-color: var(--white);
