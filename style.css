@@ -501,6 +501,19 @@ footer {
 }
 
 
+@media screen and (max-width: 768px) {
+   
+    footer {
+        align-items: start;
+        flex-direction: column;
+        gap: 50px;
+        .contact .buttons {
+            align-items: start;
+        }
+    }
+}
+
+
 #article-hero {
    background-color: var(--white);
    display: flex;
@@ -622,6 +635,13 @@ img.article-illustration {
     #article-images {
         grid-template-columns: 1fr;
     }
+    
+    img.article-illustration {
+        top: 50%;
+        left: 50%;
+        transform: translate(50%, 50%);
+        width: 55vw;
+    }
 }
 
 #article-description {
@@ -633,4 +653,5 @@ img.article-illustration {
     p {
     max-width: 500px;
     }
+
 }
