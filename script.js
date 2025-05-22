@@ -139,3 +139,54 @@ document.head.appendChild(style);
 //         img.style.transform = 'translate(0px, 0px)';
 //     });
 // });
+
+const nav = document.querySelector('.floating-nav');
+    const indicator = document.querySelector('.nav-indicator');
+    const links = Array.from(nav.querySelectorAll('a'));
+
+    function updateIndicator(link) {
+    const rect = link.getBoundingClientRect();
+    const navRect = nav.getBoundingClientRect();
+    indicator.style.width = `${rect.width}px`;
+    indicator.style.left = `${rect.left - navRect.left}px`;
+
+    // Highlight active link
+    links.forEach(l => l.classList.remove('active'));
+    link.classList.add('active');
+}
+
+function onScroll() {
+    let current = null;
+    const scrollPos = window.scrollY + 150;
+
+    links.forEach(link => {
+        const section = document.querySelector(link.getAttribute('href'));
+        if (section && section.offsetTop <= scrollPos) {
+            current = link;
+        }
+    });
+
+    if (current) {
+        indicator.style.opacity = '1';
+        updateIndicator(current);
+    } else {
+        indicator.style.opacity = '0';
+        links.forEach(l => l.classList.remove('active'));
+    }
+}
+    window.addEventListener('scroll', onScroll);
+    window.addEventListener('resize', () => {
+        const active = document.querySelector('.floating-nav a.active');
+        if (active) updateIndicator(active);
+    });
+
+// Initialisation de la boucle pour la navigation
+onScroll();
+
+window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    document.querySelectorAll('.parallax-element').forEach(el => {
+        const speed = el.dataset.speed || 0.3; // Vitesse personnalisable
+        el.style.transform = `translateY(${scrolled * speed}px)`;
+    });
+});

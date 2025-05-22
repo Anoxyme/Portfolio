@@ -1,6 +1,12 @@
 
 /* Hero : title */
-
+gsap.from(".floating-nav", {
+  opacity: 0,
+  delay: 2,
+  duration: 1,
+  y: -40,
+  ease: "power2.out"
+});
 gsap.from("#hero-title", {
   opacity: 0,
   delay: 0.3,
