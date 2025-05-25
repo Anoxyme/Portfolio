@@ -135,3 +135,10 @@ obj.addEventListener('load', () => {
   const shape = svgDoc.querySelector('.flower');
   shape.setAttribute('fill', 'blue');
 });
+
+const stickers = document.querySelectorAll(".stickers");
+stickers.forEach(sticker => {
+  gsap.from(sticker, {
+    opacity: 0
+  });
+});
