@@ -186,7 +186,7 @@ onScroll();
 window.addEventListener('scroll', () => {
     const scrolled = window.scrollY;
     document.querySelectorAll('.parallax-element').forEach(el => {
-        const speed = el.dataset.speed || 0.3; // Vitesse personnalisable
+        const speed = el.dataset.speed || 0.3; // Vitesse
         el.style.transform = `translateY(${scrolled * speed}px)`;
     });
 });

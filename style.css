@@ -24,7 +24,7 @@ body {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    background-color: var(--black);
+    background-color: var(--white);
     overflow-x: hidden;
 }
 
@@ -146,7 +146,7 @@ img {pointer-events: none;
     transform: translateX(-50%);
     border-radius: 50px;
     display: flex;
-    padding: 10px 40px;
+    padding: 10px 20px;
     z-index: 1000;
     background: rgba(255, 255, 255, 0.7); /* fond semi-transparent */
     backdrop-filter: blur(10px); /* flou derrière */
@@ -154,23 +154,24 @@ img {pointer-events: none;
     border-radius: 30px;
     border: 1px solid rgba(255, 255, 255, 0.2); /* contour léger */
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    
-}
 
-.floating-nav a {
-    font-family: var(--main-font);
-    color: var(--black);
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 40px;
-    position: relative;
-    z-index: 2;
-    border: 1px solid transparent;
-}
-
-.floating-nav a:hover {
-    border: 1px solid var(--black);
-    
+    a {
+        font-family: var(--main-font);
+        color: var(--black);
+        text-decoration: none;
+        padding: 10px 20px;
+        gap: 10px;
+        border-radius: 40px;
+        position: relative;
+        z-index: 2;
+        border: 1px solid transparent;
+    }
+    a:hover {
+        border: 1px solid var(--black); 
+    }
+    a.active {
+        color: var(--white);
+    }
 }
 
 .nav-indicator {
@@ -180,8 +181,6 @@ img {pointer-events: none;
     border-radius: 40px;
     transition: all 0.3s ease;
     z-index: 1;
-}.floating-nav a.active {
-    color: var(--white);
 }
 
 /* SECTION : Hero (Titre principal + décoration) */
@@ -190,20 +189,36 @@ img {pointer-events: none;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 
     #hero-core {
         position: relative;
-        width: 100vw;
-        height: 104vh;
+        width: 95vw;
+        height: 95vh;
         margin: 0 auto;
     
+        border-radius: 50px;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         justify-content: center;
         gap: 0;
         background-color: var(--black);
-    
+        
+        .stickers {
+            width: 25vw;
+        }
+        .s-first {
+                fill: var(--yellow);
+        }
+        .s-second {
+            color: var(--blue);
+            fill: var(--blue);
+        }
+        .s-third {
+            color: var(--orange);
+            fill: var(--orange);
+        }
         #hero-title {
             position: relative;
             display: flex;
@@ -228,7 +243,6 @@ img {pointer-events: none;
                 letter-spacing: 0.3px;
     
                 .hero-name {
-                    color: var(--blue);
                     font-family: "shantell-sans-variable", sans-serif;
                     font-variation-settings: "SPAC" 0, "BNCE" 0, "INFM" 0, "ital" 0, "wght" 400;
                     transition: font-variation-settings 0.3s ease;
@@ -241,7 +255,6 @@ img {pointer-events: none;
             
     
                 .hero-design {
-                    color: var(--red);
                     font-family: "playfair-display", serif;
                 }
             }
@@ -249,22 +262,6 @@ img {pointer-events: none;
             #start_action {
                 background-color: var(--white);
                 color: var(--black);
-            }
-    
-            .hero-star {
-                position: absolute;
-            }
-            .star1 {
-                top: -40px;
-                left: 50px;
-                scale: 0.8;
-                rotate: 7deg;
-            }
-            .star2 {
-                bottom: 20px;
-                scale: 0.7;
-                right: 0;
-                rotate: 27deg;
             }
         }
     
@@ -293,7 +290,7 @@ img {pointer-events: none;
     z-index: 50;
     position: relative;
     width: 100vw;
-    height: 1200px;
+    height: 90vh;
     background-color: var(--white);
     .lines {
         img, svg {

@@ -56,9 +56,8 @@ gsap.to("#hero-core", {
     scrub: true,
     toggleActions: "play none play none"
   },
-  height: "50vh",
+  height: "40vh",
   width: "90vw",
-  borderRadius: '50px',
   ease: "power2.out"
 });
 
@@ -128,4 +127,11 @@ sectiontitles.forEach((section, index) => {
     ease: "elastic.out(0.1,0.75)",
     y: 100,
   });
+});
+
+const obj = document.querySelector('object');
+obj.addEventListener('load', () => {
+  const svgDoc = obj.contentDocument;
+  const shape = svgDoc.querySelector('.flower');
+  shape.setAttribute('fill', 'blue');
 });
