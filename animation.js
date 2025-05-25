@@ -1,4 +1,5 @@
-
+if (!sessionStorage.getItem("stickersAnimated")) {
+    
 /* Hero : title */
 gsap.from(".floating-nav", {
   opacity: 0,
@@ -110,7 +111,9 @@ articles.forEach((article, index) => {
     delay: 0.5 * index,
     duration: 1.5,
     ease: "elastic.out(1,0.75)",
-    y: 50,
+    y: 50,onComplete: () => {
+        sessionStorage.setItem("stickersAnimated", "true");
+      }
   });
 });
 
@@ -142,3 +145,5 @@ stickers.forEach(sticker => {
     opacity: 0
   });
 });
+
+}
