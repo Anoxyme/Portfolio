@@ -1,5 +1,4 @@
-if (!sessionStorage.getItem("stickersAnimated")) {
-    
+
 /* Hero : title */
 gsap.from(".floating-nav", {
   opacity: 0,
@@ -62,6 +61,44 @@ gsap.to("#hero-core", {
   ease: "power2.out"
 });
 
+const stickers = document.querySelectorAll(".stick");
+stickers.forEach((stick, key) => {
+
+  gsap.from(stick, {
+    opacity: 0,
+    y: 20,
+    delay: 1 + key * 0.2,
+  });
+});
+
+/* stickers : animations */
+function blinkRandomly() {
+    gsap.to(".stick-oeil", {
+      scaleY: 0.1,
+      transformOrigin: "center",
+      duration: 0.1,
+      yoyo: true,
+      repeat: 1,
+      ease: "power1.inOut",
+      onComplete: () => {
+        gsap.delayedCall(Math.random() * 4 + 2, blinkRandomly);
+      }
+    });
+  }
+function moveEyeRandomly() {
+  gsap.to(".stick-oeil", {
+    x: () => gsap.utils.random(-2, 2),
+    y: () => gsap.utils.random(-2, 2),
+    duration: 0.3,
+    ease: "power1.inOut",
+    onComplete: () => {
+      gsap.delayedCall(Math.random() * 3 + 1, moveEyeRandomly);
+    }
+  });
+}
+moveEyeRandomly();
+blinkRandomly();
+
 /* Propos : lines */
 /* Propos : lines animation */
 const lines = [".lineh1", ".lineh2", ".linev1", ".linev2", ".linev3"];
@@ -111,9 +148,7 @@ articles.forEach((article, index) => {
     delay: 0.5 * index,
     duration: 1.5,
     ease: "elastic.out(1,0.75)",
-    y: 50,onComplete: () => {
-        sessionStorage.setItem("stickersAnimated", "true");
-      }
+    y: 50,
   });
 });
 
@@ -138,12 +173,3 @@ obj.addEventListener('load', () => {
   const shape = svgDoc.querySelector('.flower');
   shape.setAttribute('fill', 'blue');
 });
-
-const stickers = document.querySelectorAll(".stickers");
-stickers.forEach(sticker => {
-  gsap.from(sticker, {
-    opacity: 0
-  });
-});
-
-}
