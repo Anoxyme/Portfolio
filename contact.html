@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Un projet, une question ou envie de discuter design ? Contactez Maxime Melan pour échanger sur vos besoins en Webdesign et Développement Web.">
+    <meta property="og:title" content="Contact - Maxime Melan">
+    <meta property="og:description" content="Un projet, une question ou envie de discuter design ? Contactez Maxime Melan pour échanger sur vos besoins en Webdesign et Développement Web.">
+    <meta property="og:type" content="website">
+    <title>Contact - Maxime Melan</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/logo.ico">
+    <link rel="stylesheet" href="https://use.typekit.net/jlg5shc.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/projets.css">
+    <script src="./assets/js/header.js" defer></script>
+    <script src="./assets/js/footer.js" defer></script>
+</head>
+<body>
+    <script src="./assets/js/script.js"></script>
+    <site-header></site-header>
+    
+    <section id="hero" class="hero-projet">
+        <div id="hero-core" style="--bg-color: var(--fluo); color: var(--black); padding-bottom: 2rem; max-height: 40vh;">
+            <div class="hero-content" style="height: auto; min-height: 25vh; padding-top: 2rem; align-items: center; flex-direction: column; text-align: center; gap: 1.5rem; justify-content: center;">
+                <div class="hero-left" style="height: auto; position: relative; width: 100%; align-items: center; display: flex; justify-content: center; text-align: center;">
+                    <h1 style="position: relative; display: inline-block; margin-top: 0; line-height: 1.1;">
+                        Un projet ?<br>
+                        <span style="font-family: 'shantell-sans-variable', sans-serif; font-variation-settings: 'wght' 300; font-style: italic; color: var(--black); font-size: 0.8em;">alors on en parle.</span>
+                        <img src="./assets/images/stickers/star.svg" alt="" class="star-sticker" style="top: -20px; right: -50px; width: 45px; animation-duration: 5s; filter: brightness(0);">
+                    </h1>
+                </div>
+                <div class="hero-right" style="height: auto; justify-content: center; width: 100%; align-items: center; display: flex; text-align: center;">
+                    <p class="description" style="max-width: 600px; margin: 0 auto;">
+                        Un projet en tête, une question ou simplement envie de discuter ? Laisse-moi un message via le formulaire ci-dessous. Promis, je réponds vite !
+                    </p>
+                    <div class="contact-hero-buttons">
+                        <a href="tel:+33781688761" class="contact-hero-btn">
+                            <p data-default="Téléphone" data-hover="07 81 68 87 61">Téléphone</p>
+                        </a>
+                        <a href="mailto:maxime.melan@laposte.net" class="contact-hero-btn">
+                            <p data-default="Email" data-hover="maxime.melan@laposte.net">Email</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="page-content">
+        <section class="contact-page-section">
+            <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="34cd462e-d22d-4b10-a3f9-499a3cda5d44">
+                <input type="hidden" name="subject" value="Nouveau message depuis ton Portfolio !">
+                <input type="hidden" name="from_name" value="Portfolio Maxime Melan">
+
+                <div class="form-group">
+                    <label for="name">Ton nom</label>
+                    <input type="text" id="name" name="name" required placeholder="Maxime Melan">
+                </div>
+                <div class="form-group">
+                    <label for="email">Ton email</label>
+                    <input type="email" id="email" name="email" required placeholder="maxime@exemple.com">
+                </div>
+                <div class="form-group">
+                    <label for="message">Ton message</label>
+                    <textarea id="message" name="message" required placeholder="Parle-moi de ton projet..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Envoyer le message</button>
+                <div id="form-status" style="display: none;"></div>
+            </form>
+        </section>
+    </main>
+
+    <site-footer></site-footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+
+    <script src="./assets/js/transition.js"></script>
+    <script src="./assets/js/animation.js"></script>
+</body>
+</html>

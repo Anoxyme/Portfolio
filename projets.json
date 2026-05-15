@@ -1,0 +1,23 @@
+[
+  {
+    "titre": "Tomoki, votre futur plante de compagnie",
+    "titre_court": "Tomoki",
+    "lien": "./projets/tomoki.html",
+    "image": "./assets/images/projets/Tomoki/Square_Sticker_Mockup_1.png",
+    "categories": ["Branding", "UX / UI", "Application Mobile"]
+  },
+  {
+    "titre": "L'hélianthe, le festival pop-culture des bars",
+    "titre_court": "L'hélianthe",
+    "lien": "./projets/helianthe.html",
+    "image": "./assets/images/projets/helianthe/couverture-helianthe-web-creation.png",
+    "categories": ["Branding", "UX / UI", "Graphisme"]
+  },
+  {
+    "titre": "Podcar, écouter des podcasts personnalisées ",
+    "titre_court": "PodCar",
+    "lien": "./projets/podcar.html",
+    "image": "./assets/images/projets/podcar/Instagram post - podcar - 1.png",
+    "categories": ["Marketing", "Site Web", "Développement"]
+  }
+]

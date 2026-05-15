@@ -1,0 +1,145 @@
+/* ======================= SECTION : HERO ======================= */
+#hero {
+  position: relative; z-index: 2; display: flex; justify-content: center; align-items: center; background-color: var(--white); height: 85vh; width: 100%;
+  &.hero-projets { height: 50vh !important; }
+  #hero-core, #hero-projet { position: relative; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background-color: var(--black); background-image: url("../images/grid-layout.svg"); background-size: cover; background-position: center center;
+    .stickers { width: 30%; display: flex; align-items: center; justify-content: center; }
+    .s-first { fill: var(--yellow); } .s-second { color: var(--blue); fill: var(--blue); } .s-third { color: var(--orange); fill: var(--orange); }
+    #hero-title { width: 30%; position: relative; display: flex; flex-direction: column; align-items: center; gap: 30px;
+      h1 { color: var(--white); text-align: center; font-family: var(--title-font); font-size: 42px; line-height: 48px; letter-spacing: 0.3px;
+        .hero-name { font-family: "shantell-sans-variable", sans-serif; font-variation-settings: "SPAC" 0, "BNCE" 0, "INFM" 0, "ital" 0, "wght" 400; transition: font-variation-settings 0.3s ease; color: var(--green); }
+        .hero-design { font-family: "playfair-display", serif; color: var(--pink); }
+        .bac-sable { font-family: "shantell-sans-variable", sans-serif; font-variation-settings: "SPAC" 0, "BNCE" 0, "INFM" 0, "ital" 0, "wght" 400; font-size: 50px; font-style: italic; letter-spacing: 1px; color: var(--fluo); transition: font-variation-settings 0.3s ease; } }
+      .hero-subtitle { font-family: var(--main-font);  text-align: center; font-weight: 400; font-size: 18px; color: var(--white); opacity: 0.6; margin: 0; }
+      .hero-buttons { display: flex; gap: 20px;
+        .button { display: inline-flex; align-items: center; background-color: var(--btn-bg); color: var(--btn-color); --link-color: var(--btn-color); padding: 12px 24px; border-radius: 25px; border: solid 2px var(--btn-border); transition: var(--transition); &:hover { background-color: var(--fluo); border-color: var(--fluo); color: var(--black); --link-color: var(--black); } } } }
+    #hero-grid { position: absolute; z-index: 0; width: 100vw; } }
+  @media screen and (max-width: 768px) { #hero-core { .stickers { display: none; } #hero-title { max-width: 80%; width: 100%;} h1 { font-size: 32px; line-height: 36px; } .hero-subtitle { font-size: 16px; } } }
+}
+
+/* ======================= SECTION : A PROPOS ======================= */
+#propos {
+  display: flex; justify-content: space-between; flex-wrap: wrap; align-items: center; padding: 40px 0 100px 0;
+  .propos-l1 { width: 40%; h2 { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 600; line-height: clamp(2.5rem, 6vw, 4rem); padding-bottom: 30px; } p { max-width: 70%; } }
+  .propos-l2 { width: 60%; padding: 20px; img { width: 80%; margin: auto; display: block; } }
+}
+@media screen and (max-width: 768px) { .propos-l2 { display: none;} .propos-l1 { width: 100% !important; p {max-width: none !important;}} 
+}
+
+/* ======================= SECTION : GRILLE DES PROJETS ======================= */
+#projects {
+  padding-bottom: 80px;
+  header { display: flex; align-items: flex-end; gap: 1rem; margin-bottom: 5rem; h2 { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 600; line-height: 1; color: #111; margin: 0; white-space: nowrap; } p { font-size: 1rem; color: #555; line-height: 1.5; max-width: 360px; margin: 0; } }
+  .listes-articles { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 4rem 2.5rem;
+    li.article { display: flex;
+      article { display: flex; flex-direction: column; gap: 1.2rem; width: 100%; transition: transform 0.4s ease; position: relative; cursor: none;
+        .card-link::after { content: ''; position: absolute; inset: 0; z-index: 10; }
+        .card-link { border-radius: 12px; }
+        .image-articles { position: relative; height: 450px; width: 100%; display: flex; flex-direction: column; border-radius: 12px; overflow: hidden;
+          img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        }
+        &:hover, &:focus-within {
+          transform: translateY(-5px);
+          h3 { color: var(--link-color, var(--black)); }
+        }
+        .pastilles { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 0.8rem; align-items: center;
+          li { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 500; color: var(--black); opacity: 0.5; border: none; padding: 0; display: flex; align-items: center; gap: 0.8rem; }
+          li:not(:last-child)::after { content: ''; display: block; width: 3px; height: 3px; background-color: var(--black); opacity: 0.4; border-radius: 50%; } }
+        h3 { font-size: 2rem; font-weight: 400; font-family: var(--title-font); line-height: 1.2; margin: 0.5rem 0 0 0; color: var(--black); transition: color 0.3s ease; a { color: inherit; text-decoration: none; } }
+        p { font-size: 0.95rem; font-weight: 300; color: var(--black); opacity: 0.6; line-height: 1.6; margin: 0; flex: 1; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; } } } }
+  @media (max-width: 1024px) { .listes-articles { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 768px) { header { flex-direction: column; align-items: flex-start; gap: 0.75rem; h2 { white-space: normal; } } .listes-articles { grid-template-columns: 1fr; } }
+}
+
+.custom-cursor {
+  position: fixed;
+  z-index: 999;
+  width: 80px;
+  height: 80px;
+  background-color: var(--fluo);
+  border-radius: 50%;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+}
+.custom-cursor::before, .custom-cursor::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.custom-cursor::before {
+  width: 35px;
+  height: 2px;
+  background-color: var(--black);
+  border-radius: 2px;
+  transform: translate(-50%, -50%);
+}
+.custom-cursor::after {
+  width: 14px;
+  height: 14px;
+  background-color: transparent;
+  border-top: 2px solid var(--black);
+  border-right: 2px solid var(--black);
+  border-radius: 1px;
+  transform: translate(1px, -50%) rotate(45deg);
+}
+
+
+/* ======================= SECTION : EXPERTISE ======================= */
+#expertise {
+  padding: 60px 0 80px;
+  
+  h3 { font-family: var(--title-font); font-size: 2.5rem; font-weight: 400; margin-bottom: 2rem; color: var(--black); }
+  
+  .expertise-list { display: flex; flex-direction: column; }
+  .expertise-item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    border-top: 1px solid rgba(28, 26, 23, 0.1);
+    padding: 3rem 1rem;
+    
+    &:last-child { border-bottom: 1px solid rgba(28, 26, 23, 0.1); }
+    
+    .item-header { display: flex; align-items: center; gap: 1.5rem; flex: 0 0 50%; }
+    .item-text { display: flex; position: relative; flex-direction: column; justify-content: center; align-items: center; gap: 0.5rem; flex: 1; }
+    .item-title { font-family: var(--title-font); font-size: 1.8rem; font-weight: 400; margin: 0; color: var(--black); }
+    .item-desc { font-size: 0.85rem; font-weight: 300; color: var(--black); opacity: 0.8; line-height: 1.6; margin: 0; }
+    .item-icon { height: 100%; max-width: 100px; aspect-ratio: 1; object-fit: contain; flex-shrink: 0; }
+    
+    &:nth-child(1) .item-icon { animation: float-bounce 5s ease-in-out infinite; }
+    &:nth-child(2) .item-icon { animation: spin-pause 6s ease-in-out infinite; }
+    &:nth-child(3) .item-icon { animation: pulse-wobble 4s ease-in-out infinite; }
+  }
+  
+  @media (max-width: 768px) {
+    h3 { font-size: 2rem; }
+    .expertise-item { flex-direction: column; align-items: flex-start; gap: 1rem; position: relative; }
+    .item-header { width: 100%; gap: 1rem; }
+    .item-text { width: 100%; }
+    .item-title { font-size: 1.5rem; }
+    .item-icon { position: static; width: 45px; height: 45px; }
+  }
+}
+
+/* ======================= ANIMATIONS EXPERTISE ======================= */
+@keyframes float-bounce {
+  0%, 15%, 100% { transform: translateY(0) rotate(0deg); }
+  30%, 85% { transform: translateY(-15px) rotate(15deg); }
+}
+
+@keyframes spin-pause {
+  0%, 25% { transform: rotate(0deg); }
+  40%, 75% { transform: rotate(180deg); }
+  90%, 100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse-wobble {
+  0%, 30%, 100% { transform: scale(1) rotate(0deg); }
+  40% { transform: scale(1.2) rotate(-15deg); }
+  50% { transform: scale(1) rotate(0deg); }
+  60% { transform: scale(1.2) rotate(15deg); }
+  70% { transform: scale(1) rotate(0deg); }
+}
