@@ -14,7 +14,7 @@
       .hero-buttons { display: flex; gap: 20px;
         .button { display: inline-flex; align-items: center; background-color: var(--btn-bg); color: var(--btn-color); --link-color: var(--btn-color); padding: 12px 24px; border-radius: 25px; border: solid 2px var(--btn-border); transition: var(--transition); &:hover { background-color: var(--fluo); border-color: var(--fluo); color: var(--black); --link-color: var(--black); } } } }
     #hero-grid { position: absolute; z-index: 0; width: 100vw; } }
-  @media screen and (max-width: 768px) { #hero-core { .stickers { display: none; } #hero-title { max-width: 80%; width: 100%;} h1 { font-size: 32px; line-height: 36px; } .hero-subtitle { font-size: 16px; } } }
+  @media screen and (max-width: 768px) { #hero-core, #hero-projet { .stickers { display: none; } #hero-title { max-width: 80%; width: 100%;} h1 { font-size: 32px; line-height: 36px; } .hero-subtitle { font-size: 16px; } } }
 }
 
 /* ======================= SECTION : A PROPOS ======================= */

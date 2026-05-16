@@ -174,6 +174,11 @@ class SiteHeader extends HTMLElement {
 
             window.addEventListener('scroll', () => {
                 const currentScroll = window.scrollY || document.documentElement.scrollTop;
+                
+                const headerEl = this.querySelector('#nav-items');
+                if (headerEl) {
+                    currentScroll > 20 ? headerEl.classList.add('has-scrolled') : headerEl.classList.remove('has-scrolled');
+                }
 
                 if (currentScroll > lastScrollTop && currentScroll > scrollThreshold) {
                     brandLogo.classList.add('scrolled');

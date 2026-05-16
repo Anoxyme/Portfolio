@@ -20,7 +20,7 @@
 
   @media (max-width: 768px) {
     #hero-core {
-      padding: 8rem 1rem 3rem 1rem;
+      padding: 8rem 1rem 12vh 1rem;
       height: auto !important;
       .hero-content {
         flex-direction: column;
