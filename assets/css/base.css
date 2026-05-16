@@ -192,20 +192,30 @@ site-footer { position: fixed; bottom: 0; left: 0; width: 100%; z-index: -1; }
 }
 
 /* ======================= PAGE CONTACT ======================= */
-.contact-page-section { max-width: 800px; margin: 0 auto; padding: 4rem 0 2rem 0; }
-.contact-form { display: flex; flex-direction: column; gap: 2rem; }
-.form-group { display: flex; flex-direction: column; gap: 0.8rem; }
-.form-group label { font-family: var(--title-font); font-size: 1.5rem; color: var(--black); }
-.form-group input, .form-group textarea { width: 100%; padding: 1.2rem; border: 2px solid rgba(28, 26, 23, 0.1); border-radius: 15px; font-family: var(--main-font); font-size: 1rem; background: transparent; transition: all 0.3s ease; color: var(--black); }
+.contact-page-section { max-width: 900px; margin: 0 auto; padding: 4rem 0 2rem 0; display: flex; flex-direction: column; }
+.contact-form { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+.form-group:has(textarea) { grid-column: 1 / -1; }
+.form-group label { font-family: var(--title-font); font-size: clamp(1.1rem, 2vw, 1.3rem); color: var(--black); margin-left: 0.5rem; }
+.form-group input, .form-group textarea { width: 100%; padding: 1rem 1.2rem; border: 2px solid rgba(28, 26, 23, 0.08); border-radius: 15px; font-family: var(--main-font); font-size: 1rem; background: rgba(28,26,23,0.02); transition: all 0.3s ease; color: var(--black); }
 .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--fluo); background-color: rgba(225, 253, 84, 0.05); }
 .form-group textarea { min-height: 200px; resize: vertical; }
-.contact-form .submit-btn { align-self: flex-start; background-color: var(--black); color: var(--white); border: 2px solid var(--black); padding: 15px 40px; border-radius: 40px; font-family: var(--main-font); font-size: 1.1rem; cursor: pointer; transition: all 0.3s ease; }
+.contact-form .submit-btn { grid-column: 1 / -1; justify-self: center; background-color: var(--black); color: var(--white); border: 2px solid var(--black); padding: 14px 50px; border-radius: 40px; font-family: var(--main-font); font-size: 1.1rem; cursor: pointer; transition: all 0.3s ease; margin-top: 0.5rem; width: 100%; max-width: 300px; }
 .contact-form .submit-btn:hover { background-color: var(--fluo); color: var(--black); border-color: var(--fluo); }
 
-.contact-hero-buttons { display: flex; gap: 15px; margin-top: 1.5rem; flex-wrap: wrap; justify-content: center; }
-.contact-hero-btn { display: flex; align-items: center; justify-content: center; padding: 12px 30px; border-radius: 40px; border: solid 2px var(--black); color: var(--black); font-family: var(--main-font); font-size: 16px; background: transparent; transition: all 0.3s ease; cursor: pointer; min-width: 180px; }
+.contact-hero-buttons { display: flex; gap: 15px; margin-top: 2rem; flex-wrap: wrap; justify-content: center; }
+.contact-hero-btn { display: flex; align-items: center; justify-content: center; padding: 10px 25px; border-radius: 40px; border: solid 2px var(--black); color: var(--black); font-family: var(--main-font); font-size: 15px; background: transparent; transition: all 0.3s ease; cursor: pointer; min-width: 160px; }
 .contact-hero-btn p { margin: 0; text-align: center; }
 .contact-hero-btn:hover { background-color: var(--black); color: var(--fluo); }
+
+@media (max-width: 768px) {
+  .contact-page-section { padding: 2rem 0; }
+  .contact-form { grid-template-columns: 1fr; gap: 1.2rem; }
+  .form-group:has(textarea) { grid-column: 1; }
+  .contact-form .submit-btn { grid-column: 1; max-width: 100%; }
+  .contact-hero-buttons { flex-direction: column; gap: 10px; margin-top: 1.5rem; }
+  .contact-hero-btn { width: 100%; }
+}
 
 .form-status-message { display: none; padding: 1.5rem; border-radius: 20px; font-family: var(--main-font); font-size: 1.1rem; text-align: center; margin-top: 1rem; animation: slideUpFade 0.4s ease forwards; line-height: 1.4; }
 .form-status-success { background-color: var(--black); color: var(--white); border: 2px solid var(--fluo); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
