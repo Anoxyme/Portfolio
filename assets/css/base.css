@@ -209,7 +209,7 @@ site-footer { position: fixed; bottom: 0; left: 0; width: 100%; z-index: -1; }
 .contact-hero-btn:hover { background-color: var(--black); color: var(--fluo); }
 
 @media (max-width: 768px) {
-  .contact-page-section { padding: 2rem 0; }
+  .contact-page-section { padding: 6rem 0 2rem 0; }
   .contact-form { grid-template-columns: 1fr; gap: 1.2rem; }
   .form-group:has(textarea) { grid-column: 1; }
   .contact-form .submit-btn { grid-column: 1; max-width: 100%; }
