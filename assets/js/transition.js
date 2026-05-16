@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+(function initTransition() {
     const transitionContainer = document.createElement("div");
     transitionContainer.classList.add("page-transition");
     
@@ -134,4 +134,4 @@ document.addEventListener("DOMContentLoaded", () => {
             gsap.set(logoWrapper, { opacity: 0 });
         }
     });
-});
+})();
