@@ -79,6 +79,7 @@ gsap.to(".moulin", {
   }
 
   window.addEventListener('wheel', (e) => {
+    if (document.querySelector('nav.open')) return;
     e.preventDefault();
     const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
     target = Math.max(0, Math.min(maxScroll, target + e.deltaY));
