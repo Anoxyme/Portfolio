@@ -30,56 +30,70 @@
     <script src="./assets/js/script.js"></script>
     <site-header></site-header>
     
-    <section id="hero" class="hero-projet">
-        <div id="hero-core" style="--bg-color: var(--fluo); color: var(--black); padding-bottom: 2rem; max-height: 40vh;">
-            <div class="hero-content" style="height: auto; min-height: 25vh; padding-top: 2rem; align-items: center; flex-direction: column; text-align: center; gap: 1.5rem; justify-content: center;">
-                <div class="hero-left" style="height: auto; position: relative; width: 100%; align-items: center; display: flex; justify-content: center; text-align: center;">
-                    <h1 style="position: relative; display: inline-block; margin-top: 0; line-height: 1.1;">
-                        Un projet ?<br>
-                        <span style="font-family: 'shantell-sans-variable', sans-serif; font-variation-settings: 'wght' 300; font-style: italic; color: var(--black); font-size: 0.8em;">alors on en parle.</span>
-                        <img src="./assets/images/stickers/star.svg" alt="" class="star-sticker" style="top: -20px; right: -50px; width: 45px; animation-duration: 5s; filter: brightness(0);">
+    <main class="page-content" style="background-color: var(--white); color: var(--black); min-height: 100vh; padding-top: 20vh; padding-bottom: 10vh; display: flex; align-items: center;">
+        <div style="max-width: 1400px; margin: 0 auto; width: 100%; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem;">
+            
+            <div style="display: flex; flex-direction: column; justify-content: space-between;">
+                <div class="anim-contact">
+                    <h1 style="font-family: var(--title-font); font-size: clamp(3rem, 6vw, 6rem); font-weight: 500; line-height: 1.1; margin: 0 0 1.5rem 0;">
+                        On <br>
+                        <span style="color: var(--fluo); font-style: italic;">discute ?</span>
                     </h1>
-                </div>
-                <div class="hero-right" style="height: auto; justify-content: center; width: 100%; align-items: center; display: flex; text-align: center;">
-                    <p class="description" style="max-width: 600px; margin: 0 auto;">
-                        Un projet en tête, une question ou simplement envie de discuter ? Laisse-moi un message via le formulaire ci-dessous. Promis, je réponds vite !
+                    <p style="font-size: 1.1rem; opacity: 0.8; max-width: 400px; line-height: 1.6; margin-bottom: 3rem;">
+                        Un projet en tête, une question ou simplement envie de discuter ? Laisse-moi un message. Promis, je réponds vite !
                     </p>
-                    <div class="contact-hero-buttons">
-                        <a href="tel:+33781688761" class="contact-hero-btn">
-                            <p data-default="Téléphone" data-hover="07 81 68 87 61">Téléphone</p>
+                </div>
+
+                <div class="anim-contact" style="display: flex; flex-direction: column; gap: 2rem;">
+                    <div>
+                        <h3 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; opacity: 0.5; margin-bottom: 0.5rem; font-weight: 500;">Email</h3>
+                        <a href="mailto:maxime.melan@laposte.net" style="font-family: var(--title-font); font-size: clamp(1.2rem, 2vw, 1.8rem); color: var(--black); text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='var(--fluo)'" onmouseout="this.style.color='var(--black)'">
+                            maxime.melan@laposte.net
                         </a>
-                        <a href="mailto:maxime.melan@laposte.net" class="contact-hero-btn">
-                            <p data-default="Email" data-hover="maxime.melan@laposte.net">Email</p>
+                    </div>
+                    <div>
+                        <h3 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; opacity: 0.5; margin-bottom: 0.5rem; font-weight: 500;">Téléphone</h3>
+                        <a href="tel:+33781688761" style="font-family: var(--title-font); font-size: clamp(1.2rem, 2vw, 1.8rem); color: var(--black); text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='var(--fluo)'" onmouseout="this.style.color='var(--black)'">
+                            07 81 68 87 61
+                        </a>
+                    </div>
+                    
+                    <div style="margin-top: 1rem;">
+                        <a href="./assets/CV_Maxime_Melan.pdf" target="_blank" download style="display: inline-flex; align-items: center; justify-content: center; padding: 12px 30px; border-radius: 40px; background-color: var(--black); color: var(--white); font-family: var(--main-font); font-size: 1rem; font-weight: 500; text-decoration: none; transition: all 0.3s ease; width: fit-content;" onmouseover="this.style.backgroundColor='var(--fluo)'; this.style.color='var(--black)'" onmouseout="this.style.backgroundColor='var(--black)'; this.style.color='var(--white)'">
+                            Télécharger mon CV
                         </a>
                     </div>
                 </div>
             </div>
+
+            <div class="anim-contact" style="background: transparent; border: none; box-shadow: none; width: 100%;">
+                <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" style="display: flex; flex-direction: column; gap: 2.5rem;">
+                    <input type="hidden" name="access_key" value="34cd462e-d22d-4b10-a3f9-499a3cda5d44">
+                    <input type="hidden" name="subject" value="Nouveau message depuis ton Portfolio !">
+                    <input type="hidden" name="from_name" value="Portfolio Maxime Melan">
+                    
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem; position: relative;">
+                        <label for="name" style="font-family: var(--main-font); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(0,0,0,0.6);">Ton nom</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe" style="background: transparent; border: none; border-bottom: 1px solid rgba(0,0,0,0.2); color: var(--black); padding: 0.5rem 0; font-size: 1.2rem; font-family: var(--title-font); outline: none; transition: border-color 0.3s ease;" onfocus="this.style.borderColor='var(--fluo)'" onblur="this.style.borderColor='rgba(0,0,0,0.2)'">
+                    </div>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem; position: relative;">
+                        <label for="email" style="font-family: var(--main-font); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(0,0,0,0.6);">Ton email</label>
+                        <input type="email" id="email" name="email" required placeholder="john@exemple.com" style="background: transparent; border: none; border-bottom: 1px solid rgba(0,0,0,0.2); color: var(--black); padding: 0.5rem 0; font-size: 1.2rem; font-family: var(--title-font); outline: none; transition: border-color 0.3s ease;" onfocus="this.style.borderColor='var(--fluo)'" onblur="this.style.borderColor='rgba(0,0,0,0.2)'">
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem; position: relative;">
+                        <label for="message" style="font-family: var(--main-font); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(0,0,0,0.6);">Ton message</label>
+                        <textarea id="message" name="message" required placeholder="Parle-moi de ton projet..." rows="4" style="background: transparent; border: none; border-bottom: 1px solid rgba(0,0,0,0.2); color: var(--black); padding: 0.5rem 0; font-size: 1.2rem; font-family: var(--title-font); outline: none; resize: none; transition: border-color 0.3s ease;" onfocus="this.style.borderColor='var(--fluo)'" onblur="this.style.borderColor='rgba(0,0,0,0.2)'"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn" style="background-color: var(--fluo); color: var(--black); border: none; padding: 1.2rem 2.5rem; font-family: var(--main-font); font-size: 1rem; font-weight: 500; border-radius: 40px; cursor: pointer; transition: all 0.3s ease; width: 100%; margin-top: 1rem; text-transform: uppercase; letter-spacing: 1px;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 10px 20px rgba(225, 253, 84, 0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                        Envoyer
+                    </button>
+                    <div id="form-status" style="display: none;"></div>
+                </form>
+            </div>
         </div>
-    </section>
-
-    <main class="page-content">
-        <section class="contact-page-section">
-            <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-                <input type="hidden" name="access_key" value="34cd462e-d22d-4b10-a3f9-499a3cda5d44">
-                <input type="hidden" name="subject" value="Nouveau message depuis ton Portfolio !">
-                <input type="hidden" name="from_name" value="Portfolio Maxime Melan">
-
-                <div class="form-group">
-                    <label for="name">Ton nom</label>
-                    <input type="text" id="name" name="name" required placeholder="Maxime Melan">
-                </div>
-                <div class="form-group">
-                    <label for="email">Ton email</label>
-                    <input type="email" id="email" name="email" required placeholder="maxime@exemple.com">
-                </div>
-                <div class="form-group">
-                    <label for="message">Ton message</label>
-                    <textarea id="message" name="message" required placeholder="Parle-moi de ton projet..."></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Envoyer le message</button>
-                <div id="form-status" style="display: none;"></div>
-            </form>
-        </section>
     </main>
 
     <site-footer></site-footer>
@@ -90,5 +104,18 @@
 
     <script src="./assets/js/transition.js"></script>
     <script src="./assets/js/animation.js"></script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            gsap.from(".anim-contact", {
+                y: 30,
+                opacity: 0,
+                duration: 0.8,
+                stagger: 0.2,
+                ease: "power3.out",
+                delay: 0.4
+            });
+        });
+    </script>
 </body>
 </html>

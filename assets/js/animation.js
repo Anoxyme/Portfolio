@@ -165,4 +165,26 @@ window.addEventListener("DOMContentLoaded", () => {
         });
       }
     });
+
+    // --- Animations d'apparition au scroll (Page d'accueil & autres) ---
+    if (document.querySelector('.propos-l1')) {
+      gsap.from('.propos-l1', {
+        scrollTrigger: { trigger: '#propos', start: "top 80%" },
+        y: 30, opacity: 0, duration: 0.8, ease: "power3.out"
+      });
+      gsap.from('.propos-l2 img', {
+        scrollTrigger: { trigger: '#propos', start: "top 80%" },
+        scale: 0.9, opacity: 0, duration: 0.8, ease: "power3.out", delay: 0.2
+      });
+    }
+
+    gsap.utils.toArray('.expertise-item').forEach(item => {
+      gsap.from(item, {
+        scrollTrigger: {
+          trigger: item,
+          start: "top 85%",
+        },
+        y: 30, opacity: 0, duration: 0.6, ease: "power2.out"
+      });
+    });
 });

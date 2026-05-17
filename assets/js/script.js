@@ -36,6 +36,18 @@ document.addEventListener('DOMContentLoaded', async () => {
             </li>`;
         });
         projectsContainer.innerHTML = html;
+
+        gsap.from(projectsContainer.querySelectorAll('.article'), {
+            scrollTrigger: {
+                trigger: projectsContainer,
+                start: "top 85%"
+            },
+            y: 40,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.1,
+            ease: "power2.out"
+        });
     }
 
     const homeProjectsContainer = document.getElementById('dynamic-projects-list-home');
@@ -63,6 +75,18 @@ document.addEventListener('DOMContentLoaded', async () => {
             </li>`;
         });
         homeProjectsContainer.innerHTML = html;
+
+        gsap.from(homeProjectsContainer.querySelectorAll('.article'), {
+            scrollTrigger: {
+                trigger: homeProjectsContainer,
+                start: "top 85%"
+            },
+            y: 40,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.15,
+            ease: "power2.out"
+        });
     }
 
     function initializeProjectCursor() {
