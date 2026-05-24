@@ -19,5 +19,12 @@
     "lien": "./projets/podcar.html",
     "image": "./assets/images/projets/podcar/Instagram post - podcar - 1.png",
     "categories": ["Marketing", "Site Web", "Développement"]
+  },
+  {
+    "titre": "Popote, l'application de cuisine pour étudiants",
+    "titre_court": "Popote",
+    "lien": "./projets/popote.html",
+    "image": "./assets/images/projets/popote/popote-main-image.png",
+    "categories": ["Maquette", "UI / UX"]
   }
 ]

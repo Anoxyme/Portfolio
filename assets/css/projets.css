@@ -54,8 +54,8 @@
   }
 }
 .image-full { 
-  padding-bottom: 40px; max-height: 95vh; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; img {width: 100%; object-fit: cover;}
-  @media (max-width: 768px) { max-height: 50vh; padding-bottom: 20px; img { height: 100%; } }
+  padding-bottom: 40px; max-height: 95vh; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; img, lottie-player {width: 100%; display: block; object-fit: cover;}
+  @media (max-width: 768px) { max-height: 50vh; padding-bottom: 20px; img, lottie-player { height: 100%; } }
 }
 .image-two {
   box-sizing: border-box;
@@ -66,7 +66,7 @@
   gap: 40px;
   width: 100%;
 
-  img {
+  img, lottie-player {
     object-fit: cover;
     height: 100%;
     width: 100%;
@@ -81,7 +81,7 @@
     gap: 20px;
     padding-bottom: 20px;
       .image, .image:first-child, .image:last-child { width: 100%; height: auto; }
-      img { height: auto; max-height: 60vh; }
+      img, lottie-player { height: auto; max-height: 60vh; }
   }
 }
 .image-three {
@@ -94,7 +94,7 @@
   gap: 20px;
   width: 100%;
 
-  img {
+  img, lottie-player {
     object-fit: cover;
     height: 100%;
     width: 100%;
@@ -112,7 +112,7 @@
     gap: 20px;
     padding-bottom: 20px;
       .image { height: auto; width: 100%; }
-      img { height: auto; max-height: 60vh; }
+      img, lottie-player { height: auto; max-height: 60vh; }
   }
 }
 .paragraphe {
