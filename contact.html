@@ -8,12 +8,30 @@
     <meta property="og:description" content="Un projet, une question ou envie de discuter design ? Contactez Maxime Melan pour échanger sur vos besoins en Webdesign et Développement Web.">
     <meta property="og:type" content="website">
     <title>Contact - Maxime Melan</title>
+    <link rel="canonical" href="https://maximemelan.fr/contact.html">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contact - Maxime Melan",
+      "description": "Un projet, une question ou envie de discuter design ? Contactez Maxime Melan pour échanger sur vos besoins en Webdesign et Développement Web.",
+      "url": "https://maximemelan.fr/contact.html",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Maxime Melan",
+        "email": "maxime.melan@laposte.net",
+        "telephone": "+33781688761",
+        "url": "https://maximemelan.fr/"
+      }
+    }
+    </script>
     <link rel="icon" type="image/x-icon" href="./assets/images/logo.ico">
     <link rel="stylesheet" href="https://use.typekit.net/jlg5shc.css">
     <link rel="stylesheet" href="./assets/css/base.css">
-    <link rel="stylesheet" href="./assets/css/projets.css">
+    <link rel="stylesheet" href="./assets/css/contact.css">
     <script src="./assets/js/header.js" defer></script>
     <script src="./assets/js/footer.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js" defer></script>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -30,64 +48,101 @@
     <script src="./assets/js/script.js"></script>
     <site-header></site-header>
     
-    <main class="page-content" style="background-color: var(--white); color: var(--black); min-height: 100vh; padding-top: 20vh; padding-bottom: 10vh; display: flex; align-items: center;">
-        <div style="max-width: 1400px; margin: 0 auto; width: 100%; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem;">
+    <main class="page-content contact-page">
+        <!-- Blocs de gravité en arrière-plan -->
+        <div id="gravity-bg">
+            <a href="https://www.instagram.com/anoxyme.off/" target="_blank" class="g-item link-item" data-width="160" data-height="55">
+                Instagram
+            </a>
+            <a href="https://www.linkedin.com/in/maxime-melan/" target="_blank" class="g-item link-item" data-width="160" data-height="55">
+                LinkedIn
+            </a>
+            <a href="https://www.behance.net/" target="_blank" class="g-item link-item" data-width="160" data-height="55">
+                Behance
+            </a>
+            <div class="g-item sticker-item" data-width="90" data-height="90">
+                <img src="./assets/images/stickers/star.svg" alt="">
+            </div>
+            <div class="g-item sticker-item" data-width="100" data-height="100">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="50" fill="#E1FD54"/>
+                    <text x="50%" y="55%" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1c1a17" dy=".3em">UI / UX</text>
+                </svg>
+            </div>
+            <div class="g-item sticker-item" data-width="90" data-height="90">
+                <img src="./assets/images/stickers/star-3.png" alt="">
+            </div>
+            <div class="g-item sticker-item" data-width="90" data-height="90">
+                <img src="./assets/images/stickers/star-2.svg" alt="">
+            </div>
+            <div class="g-item sticker-item" data-width="90" data-height="90">
+                <img src="./assets/images/stickers/star-4.png" alt="">
+            </div>
+        </div>
+
+        <div class="contact-container">
             
-            <div style="display: flex; flex-direction: column; justify-content: space-between;">
-                <div class="anim-contact">
-                    <h1 style="font-family: var(--title-font); font-size: clamp(3rem, 6vw, 6rem); font-weight: 500; line-height: 1.1; margin: 0 0 1.5rem 0;">
+            <div class="contact-left">
+                <div class="anim-contact contact-header">
+                    <h1>
                         On <br>
-                        <span style="color: var(--fluo); font-style: italic;">discute ?</span>
+                        <span class="highlight">discute ?</span>
                     </h1>
-                    <p style="font-size: 1.1rem; opacity: 0.8; max-width: 400px; line-height: 1.6; margin-bottom: 3rem;">
+                    <p class="contact-desc">
                         Un projet en tête, une question ou simplement envie de discuter ? Laisse-moi un message. Promis, je réponds vite !
                     </p>
                 </div>
 
-                <div class="anim-contact" style="display: flex; flex-direction: column; gap: 2rem;">
-                    <div>
-                        <h3 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; opacity: 0.5; margin-bottom: 0.5rem; font-weight: 500;">Email</h3>
-                        <a href="mailto:maxime.melan@laposte.net" style="font-family: var(--title-font); font-size: clamp(1.2rem, 2vw, 1.8rem); color: var(--black); text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='var(--fluo)'" onmouseout="this.style.color='var(--black)'">
+                <div class="anim-contact contact-info">
+                    <div class="info-block">
+                        <h3>Email</h3>
+                        <a href="mailto:maxime.melan@laposte.net" class="contact-link">
                             maxime.melan@laposte.net
                         </a>
                     </div>
-                    <div>
-                        <h3 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; opacity: 0.5; margin-bottom: 0.5rem; font-weight: 500;">Téléphone</h3>
-                        <a href="tel:+33781688761" style="font-family: var(--title-font); font-size: clamp(1.2rem, 2vw, 1.8rem); color: var(--black); text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='var(--fluo)'" onmouseout="this.style.color='var(--black)'">
+                    <div class="info-block">
+                        <h3>Téléphone</h3>
+                        <a href="tel:+33781688761" class="contact-link">
                             07 81 68 87 61
                         </a>
                     </div>
                     
-                    <div style="margin-top: 1rem;">
-                        <a href="./assets/CV_Maxime_Melan.pdf" target="_blank" download style="display: inline-flex; align-items: center; justify-content: center; padding: 12px 30px; border-radius: 40px; background-color: var(--black); color: var(--white); font-family: var(--main-font); font-size: 1rem; font-weight: 500; text-decoration: none; transition: all 0.3s ease; width: fit-content;" onmouseover="this.style.backgroundColor='var(--fluo)'; this.style.color='var(--black)'" onmouseout="this.style.backgroundColor='var(--black)'; this.style.color='var(--white)'">
+                    <div class="info-block cv-block">
+                        <a href="./assets/CV_Maxime_Melan.pdf" target="_blank" download class="btn-cv">
                             Télécharger mon CV
                         </a>
                     </div>
                 </div>
             </div>
 
-            <div class="anim-contact" style="background: transparent; border: none; box-shadow: none; width: 100%;">
-                <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" style="display: flex; flex-direction: column; gap: 2.5rem;">
+            <div class="anim-contact contact-right">
+                <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="contact-form">
                     <input type="hidden" name="access_key" value="34cd462e-d22d-4b10-a3f9-499a3cda5d44">
                     <input type="hidden" name="subject" value="Nouveau message depuis ton Portfolio !">
                     <input type="hidden" name="from_name" value="Portfolio Maxime Melan">
                     
-                    <div style="display: flex; flex-direction: column; gap: 0.5rem; position: relative;">
-                        <label for="name" style="font-family: var(--main-font); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(0,0,0,0.6);">Ton nom</label>
-                        <input type="text" id="name" name="name" required placeholder="John Doe" style="background: transparent; border: none; border-bottom: 1px solid rgba(0,0,0,0.2); color: var(--black); padding: 0.5rem 0; font-size: 1.2rem; font-family: var(--title-font); outline: none; transition: border-color 0.3s ease;" onfocus="this.style.borderColor='var(--fluo)'" onblur="this.style.borderColor='rgba(0,0,0,0.2)'">
+                    <div class="input-row">
+                        <div class="input-group">
+                            <input type="text" id="prenom" name="prenom" required placeholder=" ">
+                            <label for="prenom">Prénom</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="nom" name="nom" required placeholder=" ">
+                            <label for="nom">Nom</label>
+                        </div>
                     </div>
                     
-                    <div style="display: flex; flex-direction: column; gap: 0.5rem; position: relative;">
-                        <label for="email" style="font-family: var(--main-font); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(0,0,0,0.6);">Ton email</label>
-                        <input type="email" id="email" name="email" required placeholder="john@exemple.com" style="background: transparent; border: none; border-bottom: 1px solid rgba(0,0,0,0.2); color: var(--black); padding: 0.5rem 0; font-size: 1.2rem; font-family: var(--title-font); outline: none; transition: border-color 0.3s ease;" onfocus="this.style.borderColor='var(--fluo)'" onblur="this.style.borderColor='rgba(0,0,0,0.2)'">
+                    <div class="input-group">
+                        <input type="email" id="email" name="email" required placeholder=" ">
+                        <label for="email">Ton email</label>
                     </div>
 
-                    <div style="display: flex; flex-direction: column; gap: 0.5rem; position: relative;">
-                        <label for="message" style="font-family: var(--main-font); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(0,0,0,0.6);">Ton message</label>
-                        <textarea id="message" name="message" required placeholder="Parle-moi de ton projet..." rows="4" style="background: transparent; border: none; border-bottom: 1px solid rgba(0,0,0,0.2); color: var(--black); padding: 0.5rem 0; font-size: 1.2rem; font-family: var(--title-font); outline: none; resize: none; transition: border-color 0.3s ease;" onfocus="this.style.borderColor='var(--fluo)'" onblur="this.style.borderColor='rgba(0,0,0,0.2)'"></textarea>
+                    <div class="input-group">
+                        <textarea id="message" name="message" required placeholder=" " rows="4"></textarea>
+                        <label for="message">Ton message</label>
                     </div>
 
-                    <button type="submit" class="submit-btn" style="background-color: var(--fluo); color: var(--black); border: none; padding: 1.2rem 2.5rem; font-family: var(--main-font); font-size: 1rem; font-weight: 500; border-radius: 40px; cursor: pointer; transition: all 0.3s ease; width: 100%; margin-top: 1rem; text-transform: uppercase; letter-spacing: 1px;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 10px 20px rgba(225, 253, 84, 0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                    <button type="submit" class="submit-btn">
                         Envoyer
                     </button>
                     <div id="form-status" style="display: none;"></div>
@@ -115,6 +170,107 @@
                 ease: "power3.out",
                 delay: 0.4
             });
+
+            // --- Simulation Physique Matter.js (Gravité) ---
+            if (typeof Matter !== 'undefined') {
+                const { Engine, Render, Runner, Bodies, Composite, Mouse, MouseConstraint } = Matter;
+
+                const engine = Engine.create();
+                const world = engine.world;
+                
+                const gravityBg = document.getElementById('gravity-bg');
+                const page = document.querySelector('.contact-page');
+                
+                if (gravityBg && page) {
+                    let w = page.offsetWidth;
+                    let h = page.offsetHeight;
+
+                    // Sols et murs invisibles
+                    const floor = Bodies.rectangle(w / 2, h + 50, w * 2, 100, { isStatic: true });
+                    const leftWall = Bodies.rectangle(-50, h / 2, 100, h * 2, { isStatic: true });
+                    const rightWall = Bodies.rectangle(w + 50, h / 2, 100, h * 2, { isStatic: true });
+                    
+                    Composite.add(world, [floor, leftWall, rightWall]);
+
+                    const items = document.querySelectorAll('.g-item');
+                    const bodies = [];
+
+                    items.forEach((item, i) => {
+                        const width = parseInt(item.getAttribute('data-width')) || 100;
+                        const height = parseInt(item.getAttribute('data-height')) || 50;
+                        
+                        item.style.width = width + 'px';
+                        item.style.height = height + 'px';
+
+                        const x = Math.random() * (w - width) + width / 2;
+                        // Fait apparaitre les blocs au-dessus de l'écran avec un délai
+                        const y = -100 - (Math.random() * 400) - (i * 120);
+
+                        const isCircle = item.classList.contains('sticker-item');
+                        
+                        let body;
+                        if (isCircle) {
+                            body = Bodies.circle(x, y, width / 2, { 
+                                restitution: 0.3, 
+                                friction: 0.1,
+                                density: 0.002
+                            });
+                        } else {
+                            body = Bodies.rectangle(x, y, width, height, { 
+                                chamfer: { radius: height / 2 },
+                                restitution: 0.2, 
+                                friction: 0.2,
+                                density: 0.002
+                            });
+                        }
+                        
+                        Matter.Body.setAngle(body, Math.random() * Math.PI * 2);
+                        item.body = body;
+                        bodies.push(body);
+                    });
+
+                    Composite.add(world, bodies);
+
+                    const mouse = Mouse.create(document.body);
+                    const mouseConstraint = MouseConstraint.create(engine, {
+                        mouse: mouse,
+                        constraint: {
+                            stiffness: 0.2,
+                            render: { visible: false }
+                        }
+                    });
+                    
+                    // Évite que Matter.js bloque le scroll natif
+                    mouseConstraint.mouse.element.removeEventListener("mousewheel", mouseConstraint.mouse.mousewheel);
+                    mouseConstraint.mouse.element.removeEventListener("DOMMouseScroll", mouseConstraint.mouse.mousewheel);
+                    mouseConstraint.mouse.element.removeEventListener("touchstart", mouseConstraint.mouse.mousedown);
+                    mouseConstraint.mouse.element.removeEventListener("touchmove", mouseConstraint.mouse.mousemove);
+                    mouseConstraint.mouse.element.removeEventListener("touchend", mouseConstraint.mouse.mouseup);
+
+                    Composite.add(world, mouseConstraint);
+
+                    Runner.run(Runner.create(), engine);
+
+                    // Boucle de mise à jour DOM <-> Physics
+                    function update() {
+                        items.forEach((item) => {
+                            const body = item.body;
+                            item.style.transform = `translate(${body.position.x - item.offsetWidth / 2}px, ${body.position.y - item.offsetHeight / 2}px) rotate(${body.angle}rad)`;
+                        });
+                        requestAnimationFrame(update);
+                    }
+                    update();
+
+                    // Gestion du redimensionnement de la fenêtre
+                    window.addEventListener('resize', () => {
+                        w = page.offsetWidth;
+                        h = page.offsetHeight;
+                        Matter.Body.setPosition(floor, { x: w / 2, y: h + 50 });
+                        Matter.Body.setPosition(leftWall, { x: -50, y: h / 2 });
+                        Matter.Body.setPosition(rightWall, { x: w + 50, y: h / 2 });
+                    });
+                }
+            }
         });
     </script>
 </body>
