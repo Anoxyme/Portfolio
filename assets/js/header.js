@@ -39,7 +39,7 @@ class SiteHeader extends HTMLElement {
                                 <span class="nav-menu__title">Projets</span>
                             </a>
                         </li>
-                        <li class="nav-menu__item relative">
+                        <!--<li class="nav-menu__item relative">
                             <a class="inline-flex nav-menu__link py-2" href="#">
                                 <span class="absolute left-0 nav-menu__arrow">
                                     <span class="nav-menu__arrow-line"></span>
@@ -47,7 +47,7 @@ class SiteHeader extends HTMLElement {
                                 </span>
                                 <span class="nav-menu__title" style="display: flex; align-items: center; gap: 15px;">Qui suis-je <span style="color: rgba(255, 255, 255, 0.3); font-size: 0.6em;">Bientôt</span></span>
                             </a>
-                        </li>
+                        </li>-->
                         <li class="nav-menu__item relative">
                             <a class="inline-flex nav-menu__link py-2" href="${base}contact.html">
                                 <span class="absolute left-0 nav-menu__arrow">
